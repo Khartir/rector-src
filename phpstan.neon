@@ -702,3 +702,4 @@ parameters:
                 - packages/BetterPhpDocParser/ValueObject/PhpDoc/DoctrineAnnotation/AbstractValuesAwareNode.php
                 - packages/BetterPhpDocParser/PhpDoc/ArrayItemNode.php
 
+        - '#Call to static method Webmozart\\Assert\\Assert\:\:allIsInstanceOf\(\) with array<Rector\\BetterPhpDocParser\\PhpDoc\\ArrayItemNode> and (.*?) will always evaluate to true#'
