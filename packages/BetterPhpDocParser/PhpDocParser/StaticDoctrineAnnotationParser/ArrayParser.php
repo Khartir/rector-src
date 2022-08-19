@@ -176,15 +176,19 @@ final class ArrayParser
         if (is_string($val) && str_starts_with($val, '"') && str_ends_with($val, '"')) {
             return String_::KIND_DOUBLE_QUOTED;
         }
+
         if (! is_string($val)) {
             return null;
         }
+
         if (! str_starts_with($val, "'")) {
             return null;
         }
+
         if (! str_ends_with($val, "'")) {
             return null;
         }
+
         return String_::KIND_SINGLE_QUOTED;
     }
 }
