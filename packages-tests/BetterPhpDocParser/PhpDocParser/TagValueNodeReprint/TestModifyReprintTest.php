@@ -62,8 +62,8 @@ final class TestModifyReprintTest extends AbstractTestCase
         );
         // this will extended tokens of first node
         $doctrineAnnotationTagValueNode->changeValue('methods', new CurlyListNode([
-            new ArrayItemNode('GET', null, String_::KIND_DOUBLE_QUOTED),
-            new ArrayItemNode('HEAD', null, String_::KIND_DOUBLE_QUOTED),
+            new ArrayItemNode('GET', String_::KIND_DOUBLE_QUOTED, null),
+            new ArrayItemNode('HEAD', String_::KIND_DOUBLE_QUOTED, null),
         ]));
 
         $expectedDocContent = trim((string) $inputFileInfoAndExpected->getExpected());

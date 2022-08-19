@@ -54,7 +54,7 @@ final class CurlyListNode extends AbstractValuesAwareNode implements Stringable
             if (is_int($key)) {
                 $itemContents .= (string) $value;
             } else {
-                $itemContents .= $key . '=' . (string) $value;
+                $itemContents .= $key . '=' . $value;
             }
 
             if ($lastItemKey !== $key) {

@@ -40,15 +40,15 @@ final class ArrayParserTest extends AbstractTestCase
 
     public function provideData(): Iterator
     {
-        yield ['{key: "value"}', [new ArrayItemNode('value', 'key', String_::KIND_DOUBLE_QUOTED)]];
+        yield ['{key: "value"}', [new ArrayItemNode('value', String_::KIND_DOUBLE_QUOTED, 'key')]];
 
         yield ['{"key": "value"}', [
-            new ArrayItemNode('value', 'key', String_::KIND_DOUBLE_QUOTED, String_::KIND_DOUBLE_QUOTED),
+            new ArrayItemNode('value', String_::KIND_DOUBLE_QUOTED, 'key', String_::KIND_DOUBLE_QUOTED),
         ]];
 
         yield ['{"value", "value2"}', [
-            new ArrayItemNode('value', null, String_::KIND_DOUBLE_QUOTED),
-            new ArrayItemNode('value2', null, String_::KIND_DOUBLE_QUOTED),
+            new ArrayItemNode('value', String_::KIND_DOUBLE_QUOTED, null),
+            new ArrayItemNode('value2', String_::KIND_DOUBLE_QUOTED, null),
         ]];
     }
 }

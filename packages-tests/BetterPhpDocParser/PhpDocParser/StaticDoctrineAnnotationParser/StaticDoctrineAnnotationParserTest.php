@@ -43,8 +43,8 @@ final class StaticDoctrineAnnotationParserTest extends AbstractTestCase
     public function provideData(): Iterator
     {
         $curlyListNode = new CurlyListNode([
-            new ArrayItemNode('chalet', null, String_::KIND_DOUBLE_QUOTED),
-            new ArrayItemNode('apartment', null, String_::KIND_DOUBLE_QUOTED),
+            new ArrayItemNode('chalet', String_::KIND_DOUBLE_QUOTED, null),
+            new ArrayItemNode('apartment', String_::KIND_DOUBLE_QUOTED, null),
         ]);
         yield ['{"chalet", "apartment"}', $curlyListNode];
 

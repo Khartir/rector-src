@@ -18,8 +18,8 @@ final class ArrayItemNode implements PhpDocTagValueNode, Stringable
      */
     public function __construct(
         private readonly mixed $value,
-        private readonly int|null $kindValueQuoted = null,
         private readonly mixed $key,
+        private readonly int|null $kindValueQuoted = null,
         private readonly int|null $kindKeyQuoted = null,
     ) {
     }
